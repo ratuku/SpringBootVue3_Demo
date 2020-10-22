@@ -25,7 +25,6 @@ public class DataAPI {
                     "1993 Porsche 911 993",
                     "2010 Lexus LFA",
                     "2008 Nissan GT-R"));
-
         return list;
     }
 
