@@ -24,7 +24,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0px;
 
   nav {
     display: flex;
@@ -32,6 +32,11 @@ export default {
     justify-content: space-between;
     padding: 10px 5%;
     background-color: #E0E0E0;
+
+    h1 {
+      display: inline;
+      align-items: center;
+    }
 
   }
 }
