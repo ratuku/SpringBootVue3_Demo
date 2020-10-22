@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### vue_demo ###
+frontend/node_modules
