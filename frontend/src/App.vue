@@ -1,11 +1,14 @@
 <template>
   <div id="app">
     <nav>
-      <h1> Cars </h1>
+      <router-link to="/">
+        <div class="navigation__logo">
+          Cars
+        </div>
+      </router-link>
     </nav>
 
-
-
+    <router-view/>
   </div>
 </template>
 
@@ -33,11 +36,15 @@ export default {
     padding: 10px 5%;
     background-color: #E0E0E0;
 
+    .navigation__logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
     h1 {
       display: inline;
       align-items: center;
     }
-
   }
 }
 </style>
