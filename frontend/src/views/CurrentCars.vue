@@ -1,24 +1,52 @@
 <template>
     <div>
         <h2>Top Cars of 2020</h2>
+        <br>
 
         <div id="row-cards">
-            <tab>
-            <thead>
-            <tr>  <th>&nbsp;</th> <th>Car Name </th>  <th> Price Range </th>  </tr>
-            </thead>
+            <div id="card1">
+                <div class="card">
+                    <h1>Volvo</h1>
+                    <div class="container">
+                        <h2> 1 </h2>
+                        <p>
+                            SUV/SEDAN
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-                <tbody>
-                    <tr v-for="item in data" v-bind:key="item.id">
-                        <th>{{item.id}}</th> <th> {{item.name}} </th>  <th> {{item["price-range"]}} </th>
-                    </tr>
-                </tbody>
+            <div id="card2">
+                <div class="card">
+                    <h1>BMW</h1>
+                    <div class="container">
+                        <h2> 1 </h2>
+                        <p>
+                            SUV/SEDAN
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-            </tab>
         </div>
 
         <div id="row-table">
+            <br>
+            <br>
+            <h3> Top Cars </h3>
 
+            <tab>
+                <thead>
+                <tr>  <th>&nbsp;</th> <th>Car Name </th>  <th> Price Range </th>  </tr>
+                </thead>
+
+                <tbody>
+                <tr v-for="item in data" v-bind:key="item.id">
+                    <th>{{item.id}}</th> <th> {{item.name}} </th>  <th> {{item["price-range"]}} </th>
+                </tr>
+                </tbody>
+
+            </tab>
         </div>
     </div>
 </template>
@@ -57,6 +85,28 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss">
+
+   .card {
+         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+         transition: 0.3s;
+        width: 40%;
+       margin-left: 30%;
+
+         &:hover {
+             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+         }
+
+         .container {
+             padding: 2px 16px;
+         }
+   }
+
+/*    #row-cards {
+        border: 1px solid red;
+        margin:10px;
+        float:left;!*Add float left*!
+        margin :10px;
+    }*/
 
 </style>
