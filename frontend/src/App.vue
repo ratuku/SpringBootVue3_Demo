@@ -46,7 +46,7 @@
             
             function openNav() {
                 let styleWidth = document.getElementById("mySidenav").style.width;
-                console.log('styleWidth',styleWidth);
+                //console.log('styleWidth',styleWidth);
                 if (styleWidth.includes('%')) {
                     document.getElementById("mySidenav").style.width = "0";
                 }
@@ -54,7 +54,7 @@
                     document.getElementById("mySidenav").style.width = "15%" //opens side navbar by 70 percent
                     //document.getElementById('content-block').style.display = "block" //displays overlay
                 }
-                console.log("openNav");
+                //console.log("openNav");
             }
 
             function closeNav() {
