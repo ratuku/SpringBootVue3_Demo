@@ -1,6 +1,10 @@
 <template>
     <div>
         <h2> Home Page </h2>
+        
+        <br>
+        
+        <img src="../assets/volvo.jpg">
     </div>
 </template>
 
