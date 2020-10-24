@@ -17,29 +17,41 @@
 
 <script>
     import axios from 'axios';
+    //import {onBeforeMount} from 'vue';
 
     export default {
         name: "TopCars",
-        setup() {
-            let data = getTopCars() || {};
-
-            function getTopCars() {
-                axios.get('http://localhost:8181/api/data/car')
-                    .then(
-                        response => {
-                            console.log(response)
-                            return response.data;
-                        }
-                    )
-                .catch(e => {
-                    console.log("Error: ", e);
-                    return;
-                })
-
-                return {
-                    data
-                }
+        data() {
+            return {
+                data: {}
             }
+        },
+        methods: {
+            async getTopCars() {
+                const varData = await axios.get('http://localhost:8181/api/data/car')
+                    .then(function (response) {
+                        if (response.status !== 200 && response.status !== 201) {
+                            console.log("Error when getting top cars: " + response.status);
+                            return;
+                        }
+                        // get data from Json
+                        return response;
+                    })
+                    .catch(e => {
+                        console.log("Error: ", e);
+                        return;
+                    });
+
+                return varData;
+            },
+            loadData() {
+                this.getTopCars().then(response => {
+                    this.data = response.data;
+                });
+            }
+        },
+        mounted() {
+            this.loadData();
         }
     }
 </script>
