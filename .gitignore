@@ -34,3 +34,4 @@ build/
 
 ### vue_demo ###
 frontend/node_modules
+frontend/dist
