@@ -71,6 +71,9 @@
 </script>
 
 <style lang="scss">
+    /*@import "node_modules/vue-material/dist/vue-material.min.css";
+    @import "node_modules/vue-material/dist/theme/default.css";*/
+
     #app {
         font-family: Avenir, Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
